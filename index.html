@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Photo Metadata Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="top-nav sticky-nav">
+      <div class="nav-content">
+        <div class="logo">
+          <i class="fas fa-camera"></i>
+          <span>Photo Metadata Viewer</span>
+        </div>
+        <button class="hamburger-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <div class="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#how-to-use" class="nav-link">How to Use</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#socialIcons" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section id="home">
+        <div class="app-header">
+          <h1>Analyze Your Photo Metadata</h1>
+          <p class="subtitle">
+            Upload your image to view detailed EXIF data and file information
+          </p>
+        </div>
+
+        <div class="upload-box" id="uploadBox">
+          <div class="upload-icon">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <p><strong>Drag and drop</strong> your image here</p>
+          <p class="upload-separator">or</p>
+          <label for="imageInput" class="upload-button">Choose File</label>
+          <input type="file" id="imageInput" accept="image/*" />
+          <p class="upload-hint">Supported formats: JPG, PNG, HEIC</p>
+        </div>
+
+        <div id="previewSection" class="preview-section">
+          <div id="imagePreview" class="image-box"></div>
+          <div id="metaDataContainer" class="metadata-box"></div>
+        </div>
+      </section>
+
+      <section id="about" class="info-section">
+        <div class="section-card">
+          <h2>
+            <i class="fas fa-info-circle"></i> About Photo Metadata Viewer
+          </h2>
+          <p>
+            Photo Metadata Viewer is a powerful, privacy-focused tool that helps
+            photographers, designers, and anyone working with digital images to
+            analyze and understand the hidden data embedded in their photos.
+          </p>
+          <p>
+            Unlike other online tools, all processing happens directly in your
+            browser - meaning your images are never uploaded to a server,
+            ensuring complete privacy and security for your sensitive photos.
+          </p>
+          <p>
+            This tool was built by photographers for photographers, with a focus
+            on providing a clean, intuitive interface to access technical
+            information that's often buried in your image files.
+          </p>
+        </div>
+      </section>
+
+      <section id="how-to-use" class="info-section">
+        <div class="section-card">
+          <h2><i class="fas fa-question-circle"></i> How to Use</h2>
+          <div class="step-guide">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Upload Your Image</h3>
+                <p>
+                  Drag and drop your photo onto the upload area or click "Choose
+                  File" to select an image from your device.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>View Basic Information</h3>
+                <p>
+                  Instantly see basic file information including dimensions,
+                  file size, and last modified date.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Explore EXIF Data</h3>
+                <p>
+                  Expand the EXIF section to view detailed camera settings, GPS
+                  coordinates (if available), and other technical metadata.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="info-section">
+        <div class="section-card">
+          <h2><i class="fas fa-star"></i> Features</h2>
+          <div class="features-grid">
+            <div class="feature">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Private & Secure</h3>
+              <p>
+                Your images never leave your browser - all processing happens
+                locally.
+              </p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-camera-retro"></i>
+              <h3>EXIF Extraction</h3>
+              <p>
+                View camera model, lens, aperture, shutter speed, ISO settings,
+                and more.
+              </p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-file-image"></i>
+              <h3>Multiple Formats</h3>
+              <p>
+                Support for JPG, PNG, HEIC, and other popular image formats.
+              </p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Location Data</h3>
+              <p>
+                See GPS coordinates and location information if available in
+                your photo.
+              </p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-desktop"></i>
+              <h3>Responsive Design</h3>
+              <p>Works perfectly on mobile, tablet, and desktop devices.</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-tachometer-alt"></i>
+              <h3>Fast Processing</h3>
+              <p>
+                Instant metadata extraction with no waiting or loading times.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="supported-formats" class="info-section">
+        <div class="section-card">
+          <h2><i class="fas fa-image"></i> Supported Image Formats</h2>
+          <div class="format-info">
+            <ul class="format-list">
+              <li>
+                <strong>JPEG/JPG</strong> - Most common format with full EXIF
+                support
+              </li>
+              <li>
+                <strong>PNG</strong> - Limited metadata but basic properties are
+                extracted
+              </li>
+              <li>
+                <strong>HEIC/HEIF</strong> - Apple's High Efficiency Image
+                Format
+              </li>
+              <li>
+                <strong>TIFF</strong> - Professional format with extensive
+                metadata support
+              </li>
+              <li><strong>WebP</strong> - Google's modern image format</li>
+              <li>
+                <strong>BMP</strong> - Basic bitmap format (limited metadata)
+              </li>
+            </ul>
+            <p class="format-note">
+              Note: The amount of metadata available varies by format. JPEG
+              images typically contain the most comprehensive EXIF data.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-icons" id="socialIcons">
+          <a
+            href="https://github.com/AadityaGeek"
+            target="_blank"
+            class="social-icon"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          <!-- </a>
+          <a href="#" class="social-icon" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a> -->
+          <a
+            href="https://www.linkedin.com/in/aadityakr"
+            target="_blank"
+            class="social-icon"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/aadityakr_/" target="_blank" class="social-icon" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:work.aadityakumar@gmail.com" target="_blank" class="social-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="copyright">
+          © <span id="currentYear"></span> Photo Metadata Viewer. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
